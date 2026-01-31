@@ -13,35 +13,35 @@
     <h1>AI Authenticity Detector</h1>
     <p class="tagline">Drag & drop image, video, or audio</p>
 
-    <!-- MODE BUTTONS -->
+   
     <div class="Detection-buttons">
         <button onclick="setMode('image')">🖼 Image</button>
         <button onclick="setMode('video')">🎥 Video</button>
         <button onclick="setMode('audio')">🎧 Audio</button>
     </div>
 
-    <!-- DROP BOX -->
+   
     <div class="drop-zone" id="dropZone">
         <p id="dropText">Drop file here or click to upload</p>
 
-        <!-- 🔥 FIX: show ALL image/video/audio files -->
+        
         <input type="file" id="file" hidden
                accept="image/*,video/*,audio/*">
     </div>
 
-    <!-- PREVIEW -->
+   
     <div id="preview" class="preview"></div>
 
-    <!-- ANALYZE -->
+   
     <button onclick="analyze()">Analyze</button>
 
-    <!-- LOADER -->
+   
     <div id="loader" class="loader hidden">
         <div class="spinner"></div>
         <p>Analyzing...</p>
     </div>
 
-    <!-- RESULT -->
+   
     <div id="result" class="result"></div>
 
 </div>
@@ -50,3 +50,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
