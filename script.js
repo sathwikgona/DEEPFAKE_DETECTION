@@ -7,23 +7,23 @@ const loader = document.getElementById("loader");
 const resultBox = document.getElementById("result");
 const dropText = document.getElementById("dropText");
 
-// SET MODE
+
 function setMode(m) {
     mode = m;
     fileInput.value = "";
     preview.innerHTML = "";
     resultBox.innerHTML = "";
 
-    // 🔥 FIX: do NOT restrict too much
+   
     fileInput.accept = "image/*,video/*,audio/*";
 
     dropText.innerText = `Drop ${mode} file here or click to upload`;
 }
 
-// CLICK TO UPLOAD
+
 dropZone.addEventListener("click", () => fileInput.click());
 
-// DRAG EVENTS
+
 dropZone.addEventListener("dragover", e => {
     e.preventDefault();
     dropZone.classList.add("drag-active");
@@ -40,10 +40,10 @@ dropZone.addEventListener("drop", e => {
     showPreview();
 });
 
-// FILE CHANGE
+
 fileInput.addEventListener("change", showPreview);
 
-// PREVIEW
+
 function showPreview() {
     const file = fileInput.files[0];
     if (!file) return;
@@ -69,7 +69,6 @@ function showPreview() {
     }
 }
 
-// ANALYZE
 async function analyze() {
     const file = fileInput.files[0];
     if (!file) return alert("Please upload a file");
@@ -102,3 +101,4 @@ async function analyze() {
 
     loader.classList.add("hidden");
 }
+
